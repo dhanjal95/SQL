@@ -1,0 +1,29 @@
+--Create a store database
+
+CREATE TABLE Store (id INTEGER PRIMARY KEY, price INTEGER, itemName TEXT, itemColor TEXT, itemSize TEXT);
+
+INSERT into Store values (1,123,"Mini Skirt", "blue", "Medium");
+INSERT into Store values (2, 321, "Collared shirt", "pink", "large");
+INSERT into Store values (3, 432, "cargo pants", "cream", "medium");
+INSERT into Store values (4, 233, "mesh tank top", "blue", "small");
+INSERT into Store values (5, 654, "tank top", "blue", "small");
+INSERT into Store values (6, 500, "plaid pants", "yellow", "small");
+INSERT into Store values (7, 567, "fur trim coat", "green", "small");
+INSERT into Store values (8, 657, "denim dress", "indigo", "small");
+INSERT into Store values (9, 748, "mesh tank top", "violet", "small");
+INSERT into Store values (10, 467, "long skirt", "coral", "small");
+INSERT into Store values (11, 598, "hoodie", "lavendar", "small");
+INSERT into Store values (12, 788, "sweater", "chartruesse", "small");
+INSERT into Store values (13, 352, "maxi dress", "purple", "small");
+INSERT into Store values (14, 654, "long sleeve top", "yellow", "small");
+INSERT into Store values (15, 654, "cardigan", "gray", "small");
+
+
+--display items from databse where price is greater than or equal to $550
+SELECT itemName, price from Store WHERE price >= 550;
+
+--display the item names ordered by price
+SELECT itemName, price from Store ORDER BY price DESC;
+
+-- display total sum price of items in database
+SELECT SUM(price) from Store;
